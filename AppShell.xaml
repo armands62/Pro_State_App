@@ -7,11 +7,28 @@
     Shell.FlyoutBehavior="Disabled"
     Shell.BackgroundColor="#D0D9DE"
     Shell.TitleColor="#556266"
-    Shell.NavBarIsVisible="True">
+    Shell.NavBarIsVisible="True"
+    Shell.TabBarBackgroundColor="#D0D9DE"
+    Shell.TabBarTitleColor="Black"
+    Shell.TabBarUnselectedColor="#556266">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-        
+
+    <TabBar>
+        <ShellContent Title="Profile"
+                      Icon="user"
+            ContentTemplate="{DataTemplate local:Profile}"/>
+        <ShellContent Title="Accounts"
+                      Icon="account"
+                          ContentTemplate="{DataTemplate local:Accounts}"/>
+        <ShellContent Title="Money Transfer"
+                      Icon="transfer"
+                          ContentTemplate="{DataTemplate local:MoneyTransfer}"/>
+        <ShellContent Title="History"
+                      Icon="history"
+                          ContentTemplate="{DataTemplate local:History}"/>
+        <ShellContent Title="Fiscleees!"
+                      Icon="fisclees"
+                          ContentTemplate="{DataTemplate local:Fisclees}"/>
+    </TabBar>
+
 </Shell>

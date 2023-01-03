@@ -8,9 +8,9 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-    private async void Login_Clicked(object sender, EventArgs e)
+    private void Login_Clicked(object sender, EventArgs e)
     {
-		await Shell.Current.GoToAsync("HomePage");
+		Application.Current.MainPage = new AppShell();
     }
 }
 
