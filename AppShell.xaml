@@ -6,11 +6,11 @@
     xmlns:local="clr-namespace:ProStateApp2"
     Shell.FlyoutBehavior="Disabled"
     Shell.BackgroundColor="#D0D9DE"
-    Shell.TitleColor="#556266"
+    Shell.TitleColor="#313334"
     Shell.NavBarIsVisible="True"
-    Shell.TabBarBackgroundColor="#D0D9DE"
-    Shell.TabBarTitleColor="Black"
-    Shell.TabBarUnselectedColor="#556266">
+    Shell.TabBarBackgroundColor="#313334"
+    Shell.TabBarTitleColor="#d0d9de"
+    Shell.TabBarUnselectedColor="#808689">
 
 
     <TabBar>

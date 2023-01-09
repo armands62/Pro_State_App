@@ -1,5 +1,6 @@
 ﻿namespace ProStateApp2;
 using MySql.Data.MySqlClient;
+using static ProStateApp2.App;
 
 public partial class MainPage : ContentPage
 {
@@ -9,6 +10,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 
     }
+
 
     private void Login_Clicked(object sender, EventArgs e)
     {
@@ -27,6 +29,7 @@ public partial class MainPage : ContentPage
                     string password = reader.GetString(4);
                     if (BCrypt.Net.BCrypt.Verify(inputPassword, password))
                     {
+                        GlobalVariables.CurrentUser = new User { id = Convert.ToInt32(reader.GetString(0)), name = reader.GetString(1), surname = reader.GetString(2), email = inputEmail, password = inputPassword, social_number = reader.GetString(5), birth_date = Convert.ToDateTime(reader.GetString(6)), gender= reader.GetString(7) };
                         Application.Current.MainPage = new AppShell();
                     }
                     else
